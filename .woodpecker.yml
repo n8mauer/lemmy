@@ -2,7 +2,7 @@
 # See https://github.com/woodpecker-ci/woodpecker/issues/1677
 
 variables:
-  # When updating the rust version here, be sure to update versions in `docker/Dockerfile`
+  # When updating the rust version here, be sure to update versions in `Dockerfile`
   # as well. Otherwise release builds can fail if Lemmy or dependencies rely on new Rust
   # features. In particular the ARM builder image needs to be updated manually in the repo below:
   # https://github.com/raskyld/lemmy-cross-toolchains
@@ -250,7 +250,7 @@ steps:
     image: woodpeckerci/plugin-docker-buildx
     settings:
       repo: dessalines/lemmy
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
       username:
         from_secret: docker_username
       password:

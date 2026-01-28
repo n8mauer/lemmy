@@ -24,7 +24,7 @@ services:
   lemmy:
     build:
       context: ../
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile
     hostname: lemmy
     restart: unless-stopped
     environment:
